@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/robimarko/openwrt
   REPO_BRANCH: ipq807x-5.15-pr
-  CONFIG_FILE: AX3600.config
+  CONFIG_FILE: AX3600-5.15.config
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
