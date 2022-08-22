@@ -68,7 +68,7 @@ jobs:
       run: |
         [ -e $DIY_P1_SH ] && mv $DIY_P1_SH openwrt/diy-part1.sh
         cd openwrt
-        chmod +x diy-part1.sh
+        chmod +x $GITHUB_WORKSPACE/diy-part1.sh
         $GITHUB_WORKSPACE/diy-part1.sh
 
 
@@ -81,7 +81,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         [ -e $DIY_P2_SH ] && mv $DIY_P2_SH openwrt/diy-part2.sh
         cd openwrt
-        chmod +x diy-part2.sh
+        chmod +x $GITHUB_WORKSPACE/diy-part1.sh
         $GITHUB_WORKSPACE/diy-part2.sh
 
     - name: SSH connection to Actions
