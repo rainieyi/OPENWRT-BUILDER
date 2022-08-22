@@ -66,10 +66,9 @@ jobs:
 
     - name: Load custom feeds
       run: |
-        [ -e $DIY_P1_SH ] && mv $DIY_P1_SH openwrt/diy-part1.sh
+        chmod +x $DIY_P1_SH
         cd openwrt
-        chmod +x $GITHUB_WORKSPACE/diy-part1.sh
-        $GITHUB_WORKSPACE/diy-part1.sh
+        $GITHUB_WORKSPACE/$DIY_P1_SH
 
 
     - name: Install feeds
@@ -79,10 +78,9 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        [ -e $DIY_P2_SH ] && mv $DIY_P2_SH openwrt/diy-part2.sh
+        chmod +x $DIY_P2_SH
         cd openwrt
-        chmod +x $GITHUB_WORKSPACE/diy-part1.sh
-        $GITHUB_WORKSPACE/diy-part2.sh
+        $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
