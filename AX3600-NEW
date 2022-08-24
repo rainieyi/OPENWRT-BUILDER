@@ -1017,7 +1017,7 @@ CONFIG_PACKAGE_ttyd=y
 
 
 
-
+# CONFIG_PACKAGE_dnsmasq is not set
 
 
 CONFIG_PACKAGE_collectd=y
